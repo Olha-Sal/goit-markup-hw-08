@@ -84,15 +84,15 @@ address {
   color: $primary-white-color;
 }
 
-.footer_socials {
-  // @media screen and (min-width: 768px) {
-  //   margin-right: 80px;
-  // }
+// .footer_socials {
+//   // @media screen and (min-width: 768px) {
+//   //   margin-right: 80px;
+//   // }
 
-  // @media screen and (min-width: 1200px) {
-  //   margin-right: 70px;
-  // }
-}
+//   // @media screen and (min-width: 1200px) {
+//   //   margin-right: 70px;
+// }
+// }
 
 .footer__text {
   display: block;
@@ -205,7 +205,7 @@ address {
 .footer__subscribe {
   display: flex;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
