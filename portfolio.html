@@ -11,30 +11,38 @@
   </head>
   <body>
     <header>
-        <div class="container site-nav">   
-            <nav>
+        <div class="container">   
+            <nav class="site-nav">
                 <a class="upper-logo" href="./index.html"><span class="web">Web</span>Studio</a>
-                <ul class="main-nav">
-                    <li class="main-nav__item"><a href="./index.html" class="link">Студия</a></li>
-                    <li class="main-nav__item"><a href="./portfolio.html" class="link current">Портфолио</a></li>
-                    <li class="main-nav__item"><a href="" class="link">Контакты</a></li>
-                </ul>
-            </nav>
-            <ul class="contacts">
-                <li>
-                    <a class="contacts-link" href="mailto:info@devstudio.com">
-                    <svg class="contacts-link__icon icon-envelope">
-                        <use href="./images/icons/symbol-defs.svg#icon-envelope"></use>
-                    </svg>info@devstudio.com</a>
-                </li>
-                <li>
-                    <a class="contacts-link" href="tel:+380961111111">
-                    <svg class="contacts-link__icon icon-smartphone">
-                        <use href="./images/icons/symbol-defs.svg#icon-smartphone"></use>
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                    <svg width="24" height="24" aria-label="Переключатель мобильного меню">
+                        <use class="icon-menu" href="./images/icons/symbol-defs.svg#icon-menu"></use>
+                        <use class="icon-cross" href="./images/icons/symbol-defs.svg#icon-close"></use>
                     </svg>
-                    +38 096 111 11 11</a>
-                </li>
-            </ul>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <ul class="main-nav">
+                        <li class="main-nav__item"><a href="./index.html" class="link">Студия</a></li>
+                        <li class="main-nav__item"><a href="./portfolio.html" class="link current">Портфолио</a></li>
+                        <li class="main-nav__item"><a href="" class="link">Контакты</a></li>
+                    </ul>
+                    <ul class="contacts">
+                        <li>
+                            <a class="contacts-link" href="mailto:info@devstudio.com">
+                            <svg class="contacts-link__icon" width="16" height="12">
+                                <use href="./images/icons/symbol-defs.svg#icon-envelope"></use>
+                            </svg>info@devstudio.com</a>
+                        </li>
+                        <li>
+                            <a class="contacts-link" href="tel:+380961111111">
+                            <svg class="contacts-link__icon" width="10" height="16">
+                                <use href="./images/icons/symbol-defs.svg#icon-smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </header>
     <main>
@@ -61,12 +69,16 @@
             <li class="portfolio__card">
               <a href="">
                 <div class="img__card">
-                  <img
+                  <picture>
+                    <source srcset="./images/port1/port1.jpg 1x, ./images/port1/port1@2x.jpg 2x, ./images/port1/port1@3x.jpg 3x" media="(min-width:1200px)" />
+                    <source srcset="./images/port1/port1-tab.jpg 1x, ./images/port1/port1-tab@2x.jpg 2x, ./images/port1/port1-tab@3x.jpg 3x" media="(min-width:768px)" />
+                    <source srcset="./images/port1/port1-mob.jpg 1x, ./images/port1/port1-mob@2x.jpg 2x, ./images/port1/port1-mob@3x.jpg 3x" media="(max-width:767px)" />
+                    <img src="./images/port1/port1.jpg" alt="Технокряк" />
+                  </picture>
+                  <!-- <img
                     src="./images/imgport1.jpg"
                     alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  /> -->
                   <div class="img-description">
                     <p class="img-text">
                       Технокряк это современная площадка распространения
@@ -85,12 +97,18 @@
             <li class="portfolio__card">
               <a href="">
                 <div class="img__card">
-                  <img
+                  <picture>
+                    <source srcset="./images/port2/port2.jpg 1x, ./images/port2/port2@2x.jpg 2x, ./images/port2/port2@3x.jpg 3x" media="(min-width:1200px)" />
+                    <source srcset="./images/port2/port2-tab.jpg 1x, ./images/port2/port2-tab@2x.jpg 2x, ./images/port2/port2-tab@3x.jpg 3x" media="(min-width:768px)" />
+                    <source srcset="./images/port2/port2-mob.jpg 1x, ./images/port2/port2-mob@2x.jpg 2x, ./images/port2/port2-mob@3x.jpg 3x" media="(max-width:767px)" />
+                    <img src="./images/port2/port2.jpg" alt="Постер New Orlean vs Golden Star" />
+                  </picture>
+                  <!-- <img
                     src="./images/imgport2.jpg"
                     alt="Постер New Orlean vs Golden Star"
                     width="370"
                     height="294"
-                  />
+                  /> -->
                   <div class="img-description">
                     <p class="img-text">
                       Технокряк это современная площадка распространения
@@ -109,12 +127,18 @@
             <li class="portfolio__card">
               <a href="">
                 <div class="img__card">
-                  <img
+                  <picture>
+                    <source srcset="./images/port3/port3.jpg 1x, ./images/port3/port3@2x.jpg 2x, ./images/port3/port3@3x.jpg 3x" media="(min-width:1200px)" />
+                    <source srcset="./images/port3/port3-tab.jpg 1x, ./images/port3/port3-tab@2x.jpg 2x, ./images/port3/port3-tab@3x.jpg 3x" media="(min-width:768px)" />
+                    <source srcset="./images/port3/port3-mob.jpg 1x, ./images/port3/port3-mob@2x.jpg 2x, ./images/port3/port3-mob@3x.jpg 3x" media="(max-width:767px)" />
+                    <img src="./images/port3/port3.jpg" alt="Ресторан Seafood" />
+                  </picture>
+                  <!-- <img
                     src="./images/imgport3.jpg"
                     alt="Ресторан Seafood"
                     width="370"
                     height="294"
-                  />
+                  /> -->
                   <div class="img-description">
                     <p class="img-text">
                       Технокряк это современная площадка распространения
@@ -133,12 +157,18 @@
             <li class="portfolio__card">
               <a href="">
                 <div class="img__card">
-                  <img
+                  <picture>
+                  <source srcset="./images/port4/port4.jpg 1x, ./images/port4/port4@2x.jpg 2x, ./images/port4/port4@3x.jpg 3x" media="(min-width:1200px)" />
+                  <source srcset="./images/port4/port4-tab.jpg 1x, ./images/port4/port4-tab@2x.jpg 2x, ./images/port4/port4-tab@3x.jpg 3x" media="(min-width:768px)" />
+                  <source srcset="./images/port4/port4-mob.jpg 1x, ./images/port4/port4-mob@2x.jpg 2x, ./images/port4/port4-mob@3x.jpg 3x" media="(max-width:767px)" />
+                  <img src="./images/port4/port4.jpg" alt="Проект Prime" />
+                  </picture>
+                  <!-- <img
                     src="./images/imgport4.jpg"
                     alt="Проект Prime"
                     width="370"
                     height="294"
-                  />
+                  /> -->
                   <div class="img-description">
                     <p class="img-text">
                       Технокряк это современная площадка распространения
@@ -157,12 +187,18 @@
             <li class="portfolio__card">
               <a href="">
                 <div class="img__card">
-                  <img
+                  <picture>
+                    <source srcset="./images/port5/port5.jpg 1x, ./images/port5/port5@2x.jpg 2x, ./images/port5/port5@3x.jpg 3x" media="(min-width:1200px)" />
+                    <source srcset="./images/port5/port5-tab.jpg 1x, ./images/port5/port5-tab@2x.jpg 2x, ./images/port5/port5-tab@3x.jpg 3x" media="(min-width:768px)" />
+                    <source srcset="./images/port5/port5-mob.jpg 1x, ./images/port5/port5-mob@2x.jpg 2x, ./images/port5/port5-mob@3x.jpg 3x" media="(max-width:767px)" />
+                    <img src="./images/port5/port5.jpg" alt="Проект Boxes" />
+                  </picture>
+                  <!-- <img
                     src="./images/imgport5.jpg"
                     alt="Проект Boxes"
                     width="370"
                     height="294"
-                  />
+                  /> -->
                   <div class="img-description">
                     <p class="img-text">
                       Технокряк это современная площадка распространения
@@ -181,12 +217,18 @@
             <li class="portfolio__card">
               <a href="">
                 <div class="img__card">
-                  <img
+                  <picture>
+                    <source srcset="./images/port6/port6.jpg 1x, ./images/port6/port6@2x.jpg 2x, ./images/port6/port6@3x.jpg 3x" media="(min-width:1200px)" />
+                    <source srcset="./images/port6/port6-tab.jpg 1x, ./images/port6/port6-tab@2x.jpg 2x, ./images/port6/port6-tab@3x.jpg 3x" media="(min-width:768px)" />
+                    <source srcset="./images/port6/port6-mob.jpg 1x, ./images/port6/port6-mob@2x.jpg 2x, ./images/port6/port6-mob@3x.jpg 3x" media="(max-width:767px)" />
+                    <img src="./images/port6/port6.jpg" alt="Inspiration has no Borders" />
+                  </picture>
+                  <!-- <img
                     src="./images/imgport6.jpg"
                     alt="Inspiration has no Borders"
                     width="370"
                     height="294"
-                  />
+                  /> -->
                   <div class="img-description">
                     <p class="img-text">
                       Технокряк это современная площадка распространения
@@ -205,12 +247,18 @@
             <li class="portfolio__card">
               <a href="">
                 <div class="img__card">
-                  <img
+                <picture>
+                  <source srcset="./images/port7/port7.jpg 1x, ./images/port7/port7@2x.jpg 2x, ./images/port7/port7@3x.jpg 3x" media="(min-width:1200px)" />
+                  <source srcset="./images/port7/port7-tab.jpg 1x, ./images/port7/port7-tab@2x.jpg 2x, ./images/port7/port7-tab@3x.jpg 3x" media="(min-width:768px)" />
+                  <source srcset="./images/port7/port7-mob.jpg 1x, ./images/port7/port7-mob@2x.jpg 2x, ./images/port7/port7-mob@3x.jpg 3x" media="(max-width:767px)" />
+                  <img src="./images/port7/port7.jpg" alt="Издание Limited Edition" />
+                </picture>
+                  <!-- <img
                     src="./images/imgport7.jpg"
                     alt="Издание Limited Edition"
                     width="370"
                     height="294"
-                  />
+                  /> -->
                   <div class="img-description">
                     <p class="img-text">
                       Технокряк это современная площадка распространения
@@ -229,12 +277,18 @@
             <li class="portfolio__card">
               <a href="">
                 <div class="img__card">
-                  <img
+                <picture>
+                  <source srcset="./images/port8/port8.jpg 1x, ./images/port8/port8@2x.jpg 2x, ./images/port8/port8@3x.jpg 3x" media="(min-width:1200px)" />
+                  <source srcset="./images/port8/port8-tab.jpg 1x, ./images/port8/port8-tab@2x.jpg 2x, ./images/port8/port8-tab@3x.jpg 3x" media="(min-width:768px)" />
+                  <source srcset="./images/port8/port8-mob.jpg 1x, ./images/port8/port8-mob@2x.jpg 2x, ./images/port8/port8-mob@3x.jpg 3x" media="(max-width:767px)" />
+                  <img src="./images/port8/port8.jpg" alt="Проект LAB" />
+                </picture>
+                  <!-- <img
                     src="./images/imgport8.jpg"
                     alt="Проект LAB"
                     width="370"
                     height="294"
-                  />
+                  /> -->
                   <div class="img-description">
                     <p class="img-text">
                       Технокряк это современная площадка распространения
@@ -253,12 +307,18 @@
             <li class="portfolio__card">
               <a href="">
                 <div class="img__card">
-                  <img
+                  <picture>
+                    <source srcset="./images/port9/port9.jpg 1x, ./images/port9/port9@2x.jpg 2x, ./images/port9/port9@3x.jpg 3x" media="(min-width:1200px)" />
+                    <source srcset="./images/port9/port9-tab.jpg 1x, ./images/port9/port9-tab@2x.jpg 2x, ./images/port9/port9-tab@3x.jpg 3x" media="(min-width:768px)" />
+                    <source srcset="./images/port9/port9-mob.jpg 1x, ./images/port9/port9-mob@2x.jpg 2x, ./images/port9/port9-mob@3x.jpg 3x" media="(max-width:767px)" />
+                    <img src="./images/port9/port9.jpg" alt="Growing Business" />
+                  </picture>
+                  <!-- <img
                     src="./images/imgport9.jpg"
                     alt="Growing Business"
                     width="370"
                     height="294"
-                  />
+                  /> -->
                   <div class="img-description">
                     <p class="img-text">
                       Технокряк это современная площадка распространения
@@ -334,6 +394,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile.js"></script>
     <div
       class="notranslate"
       style="position: absolute; top: 0; right: 0"

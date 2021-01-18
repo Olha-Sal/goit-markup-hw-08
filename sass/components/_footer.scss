@@ -12,25 +12,62 @@ address {
 
 .footer {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    padding: 0 80px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    justify-content: baseline;
+    padding: 0;
+  }
 }
+
 .footer__contacts {
-  margin-right: 70px;
+  @media screen and (min-width: 768px) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 
 .footer__logo {
   display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
   font-family: $logo_font;
   font-weight: 700;
   font-size: 26px;
   color: $primary-white-color;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
 }
 
-.footer__nav li:not(:last-child) {
-  margin-bottom: 9px;
+.footer__nav {
+  text-align: center;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+
+    & li:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
 }
 
 .footer__nav a {
+  font-family: $main_font;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -47,6 +84,16 @@ address {
   color: $primary-white-color;
 }
 
+.footer_socials {
+  // @media screen and (min-width: 768px) {
+  //   margin-right: 80px;
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   margin-right: 70px;
+  // }
+}
+
 .footer__text {
   display: block;
   margin-bottom: 20px;
@@ -55,15 +102,21 @@ address {
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   color: $primary-white-color;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .socials-list__footer {
   margin-left: 0;
   margin-right: auto;
   display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
 .social-item__footer:not(:last-child) {
@@ -101,17 +154,25 @@ address {
 
 .footer__subscription {
   display: block;
-  margin-left: 90px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 90px;
+  }
 }
 
 .footer__mailing {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-self: baseline;
+  }
 }
 
 .footer__input {
-  margin-right: 12px;
+  position: relative;
+  margin-bottom: 20px;
   padding: 15px 16px;
-  width: 358px;
+  width: 100%;
   height: 50px;
 
   background-color: $dark-bg-color;
@@ -129,10 +190,27 @@ address {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    margin-right: 12px;
+    width: 358px;
+  }
 }
 
 .footer__subscribe {
   display: flex;
+
+  @media screen and (max-width: 1200px) {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
   border-radius: 4px;
   padding: 11px 34px;
   margin: 0;
