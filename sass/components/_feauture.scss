@@ -52,7 +52,7 @@
   text-transform: uppercase;
   color: $primery-heading-color;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     text-align: center;
   }
 }

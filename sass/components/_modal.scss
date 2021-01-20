@@ -7,6 +7,7 @@
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms $timing-function;
   opacity: 1;
+  z-index: 2;
 
   overflow-y: scroll;
 }
@@ -163,6 +164,7 @@
 .form-check {
   position: relative;
   align-items: center;
+  // text-align: center;
   font-family: $main_font;
   font-weight: 400;
   font-size: 12px;

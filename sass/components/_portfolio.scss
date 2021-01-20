@@ -66,13 +66,21 @@
 .portfolio__card {
   display: inline-block;
   max-width: 100%;
+  height: 404px;
   border: 1px solid $border-color-elements;
   margin-bottom: 30px;
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 2 * 30px) / 2);
+    // width: 354px;
+    max-width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:nth-child(2) {
+      height: 440px;
+    }
+  }
+
   @media screen and (min-width: 1200px) {
     // width: calc((100% - 6 * 30px) / 3);
     width: 370px;
@@ -110,12 +118,12 @@
 .img-text {
   font-family: $main_font;
   font-size: 18px;
-  line-height: 1.56;
+  line-height: 28px;
   color: $main-bg-color;
 }
 
 .text__card {
-  width: 370px;
+  max-width: 370px;
   padding: 20px 24px;
 }
 
